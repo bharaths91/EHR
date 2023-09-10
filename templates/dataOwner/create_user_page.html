@@ -1,0 +1,119 @@
+{% extends ('dataOwner/dataOwner_base.html') %}
+{% block title %} dataOwner | Add user {% endblock %}
+{% block content %}
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+	<style>
+
+.card{
+background:transparent;
+ box-shadow:10px 15px 40px #662D8C;
+ background-image:linear-gradient(to left, #662D8C,#FE9090);
+}
+
+.form-control{
+border-radius:40px;
+text-align:center;
+}
+
+	</style>
+
+<center>
+
+<div class="container">
+<h2 class="text-center"><a href="http://bootstrap-ecommerce.com/"> </a></h2>
+
+<div class="row justify">
+<div class="col-sm-12">
+<div class="card">
+	<div class="error_mail">{{ dlt }}</div>
+<header class="card-header" style="box-shadow:5px 10px 30px black;">
+
+	<h4 class="card-title mt-2">Create User</h4>
+</header><br>
+<article class="card-body">
+<form action="" method="post" enctype="multipart/form-data">
+	<div class="form-row">
+<!--		<div class="col-md-3 form-group">-->
+<!--			<label>User Id</label>-->
+<!--		  	<input type="text" class="form-control" name="user_id"  required placeholder="Enter user id">-->
+<!--		</div> &lt;!&ndash; form-group end.// &ndash;&gt;-->
+
+			<div class="col-md-6 form-group">
+			<label>User Name</label>
+		<input type="text" class="form-control" name="username" required placeholder="Enter unique user name">
+		<h5 class="error_mail">{{msg}}</h5>
+		</div> <!-- form-group end.// -->
+
+		<div class="col-md-6 form-group">
+			<label>Attribute</label>
+			<select name="branch" required class="form-control">
+                             {% for i in range (domain_names | length) %}
+                              <option value="{{ domain_codes[i] }}">{{ domain_names[i] }}</option>
+                              {% endfor %}
+			</select>
+		</div> <!-- form-group end.// -->
+
+
+		</div> <!-- form-row end.// -->
+	<div class="form-row">
+		<div class="col-md-6  form-group">
+			<label>User Email address</label>
+		<input type="email" class="form-control" required name="email" placeholder="Ex: user@gmail.com">
+
+		</div> <!-- form-group end.// -->
+
+
+<!--	<div class="col-md-6 form-group">-->
+<!--		<label>User Mobile Number :</label>-->
+<!--	    <input class="form-control" name="mobile" required minlength="10" maxlength="10" placeholder="Ex: 9876543210" type="tel" aria-label="10-digit phone number" pattern="[0-9]{10}">-->
+<!--	</div> &lt;!&ndash; form-group end.// &ndash;&gt;-->
+
+	<div class="col-md-6 form-group">
+		<label>Create password</label>
+	    <input class="form-control" name="password" minlength="5" id="password"  placeholder="Password should be more than 4 characters " required  type="password">
+	</div> <!-- form-group end.// -->
+
+<!--		pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"-->
+
+<!--			<div class="col-md-8 form-group">-->
+<!--		<label>Address</label>-->
+<!--	    <input class="form-control" required name="address" placeholder="Enter complete address"  type="text">-->
+<!--	</div> &lt;!&ndash; form-group end.// &ndash;&gt;-->
+
+		</div> <!-- form-row end.// -->
+	<br>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Submit  </button>
+    </div> <!-- form-group// -->
+	<h5 class="error_mail">{{ msg1 }}</h5>
+
+</form>
+</article> <!-- card-body end .// -->
+
+</div> <!-- col.//-->
+
+</div> <!-- row.//-->
+
+
+</div>
+	</div>
+	</center>
+
+
+<script>
+<!--var password = document.getElementById("password");-->
+
+<!--&lt;!&ndash;&lt;!&ndash;password.addEventListener('change', new_fun);&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;password.addEventListener('change', new_fun);&ndash;&gt;-->
+
+<!--function my_fun(){-->
+<!-- var val = password.value;-->
+<!-- if -->
+
+<!--}-->
+</script>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends ('dataOwner/dataOwner_base.html') %}
+{% block title %} dataOwner | UploadFile {% endblock %}
+{% block content %}
+
+<style>
+*{
+font-family:san-serif;
+}
+.form-control{
+background:transparent;
+color:white;
+}
+
+select option{
+font-weight:bold;
+margin: 3px 5px;
+padding: 2px 0;
+border-radius:20%;
+width:80%;
+position:relative;
+left:10%;
+}
+.home-card{
+margin-left:50px;
+box-shadow: inset 3px 4px 5px 6px #000;
+height:50vh;
+width:90%;
+padding-left:8%;
+}
+input{
+text-align:center;
+}
+</style>
+
+         <h2 class="second-h2 text-white" >FILE ACCESS CONTROL</h2><br>
+       <form class="form-horizontal home-card" action="/dataOwner_file_access_update" method="post" enctype="multipart/form-data">
+            <div class="row">
+
+               <div class="col-md-4 col-lg-3 col-sm-12">
+                       <label class="control-label col-sm-12" for="audio">File Number:</label><br><br>
+                      <input type="text" style="color:black" class="form-control" required readonly value="{{ f_no }}" name="file_num" /><br>
+               </div>
+
+               <div class="col-md-4 col-lg-3 col-sm-12">
+                       <label class="control-label col-sm-12" for="audio">File Name:</label><br><br>
+                      <input type="text" style="color:black" class="form-control" required readonly value="{{ f_name }}" name="file_name" id="audio"/><br>
+               </div>
+
+               <div class="col-md-4 col-lg-3 col-sm-12">
+                       <label class="control-label col-sm-12" for="audio">Access Given:</label><br><br>
+                      <input type="text" style="color:black" class="form-control" required readonly value="{{ old_access }}" name="a"/><br>
+               </div>
+
+
+                <div class="col-md-5 col-lg-4 col-sm-12">
+                         <label class="control-label col-sm-12" >Give Access :</label><br><br>
+                          <select multiple size="6" name="access"  class="form-control text-center" required >
+                              {% for i in range(d_names|length) %}
+                              <option value="{{ d_codes[i] }}">{{ d_names[i] }}</option>
+                              {% endfor %}
+                          </select>
+                </div>
+
+            </div>
+           <br><br>
+            <div class="row">
+             <div class="col-sm-offset-3 col-sm-8">
+            <button style="width:100px;height:50px;margin-top:-200px;" type="submit" class="btn-danger predict">Submit</button>
+            </div>
+                </div>
+         {{ msg }}
+           </form>
+{% endblock %}

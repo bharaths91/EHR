@@ -1,0 +1,53 @@
+{% extends ('admin/admin_base.html') %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+<style>
+.table{
+border:1px solid white;
+max-height:70vh;
+overflow:scroll;
+}
+    .t_body{
+    background-color:black;
+    }
+
+</style>
+<button class="font"><a href="/create_dataOwner"  class="font link-primary">Add DataOwner</a></button><br>
+<div style="width:80%;">
+<table class="table table-hover table-dark table-bordered text-center">
+  <thead>
+    <tr>
+                <th scope="col">D.O. ID</th>
+                 <th scope="col">D.O. CODE</th>
+                <th scope="col">D.O. NAME</th>
+                 <th scope="col">D.O. EMAIL ID</th>
+<!--                <th scope="col">D.O. MOBILE NUMBER</th>-->
+                <th scope="col">EDIT</th>
+<!--                <th scope="col">DELETE</th>-->
+    </tr>
+  </thead>
+  <tbody class="t_body">
+
+             {% for i in data %}
+            <tr>
+
+       <td>{{ i[0] }}</td><td>{{ i[1] }}</td><td>{{ i[3] }}</td><td>{{ i[4] }}</td>
+
+              <td>  <form action="/edit_dataOwner" method="post">
+                    <input type="hidden" name="do_code" readonly value="{{ i[1] }}">
+                     <button type="submit" style="padding:2px 8px;" class="file_button">Edit</button>
+                </form></td>
+
+<!--                  <td><form action="/admin_do_delete" method="post">-->
+<!--                       <input type="hidden" name="do_code" readonly value="{{ i[0] }}">-->
+<!--                <button type="submit" style="padding:2px 8px;" class="file_button">Delete</button>-->
+<!--                  </form></td>-->
+            </tr>
+                   {% endfor %}
+
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
